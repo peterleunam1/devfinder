@@ -1,0 +1,141 @@
+@import "../../../scss/abstracts/mixins";
+@import "../../../scss/abstracts/variables";
+
+.content {
+  @include flex(column, center, center);
+  width: 100%;
+  margin: 0 auto;
+
+  .content__one {
+    @include flex(row, space-around, center);
+    width: $width;
+    
+    @include mobileL {
+      justify-content: space-between;
+      padding: $pm1;
+      margin-top: $pm2;
+    }
+
+    img {
+      margin-top: 40px;
+      width: 15%;
+      border-radius: 50%;
+      @include tablet {
+        width: 18%;
+      }
+      @include mobileL {
+        width: 25%;
+        margin: 0;
+      }
+    }
+    .content__row {
+      @include flex(row, space-between, center);
+      width: 78%;
+      @include mobileL {
+        flex-wrap: wrap;
+        width: 68%;
+      }
+      .content__name {
+        text-align: left;
+        width: auto;
+        margin-left: 38px;
+
+  
+        @include tablet {
+          width: 50%;
+        }
+  
+        @include mobileL {
+          width: 100%;
+          text-align: left;
+          margin-left: 0;
+          h2{
+            font-size: 20px;          }
+        }
+        
+      }
+      .content__user {
+        color: color(buttonColor);
+        font-weight: bolder;
+        width: 31%;
+        @include mobileL {
+          width: 100%;
+        }
+      }
+      .content__join {
+        font-size: 15px;
+        font-weight: bold;
+        width: 33%;
+  
+        @include mobileL {
+          width: 100%;
+          margin-top: $pm1;
+        }
+      }
+    }
+  }
+  .content__two {
+    @include flex(column, center, center);
+    width: $width;
+
+    .content__bio {
+      width: 50%;
+      margin-bottom: $pm2 + $pm1;
+      margin-top: -$pm2;
+
+      @include tablet {
+        width: 57%;
+      }
+
+      @include mobileL {
+        width: 98%;
+        text-align: justify;
+        margin-top: $pm2;
+        font-size: 15px;
+      }
+    }
+    .content__follow {
+      @include flex(row, space-evenly, center);
+      width: $width;
+      p {
+        @include flex(column, center, center);
+        b {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .content__three {
+    width: 100%;
+    @include flex(row, flex-end, center);
+    flex-wrap: wrap;
+    margin: $pm2 + $pm1 0;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include mobileL {
+      width: 90%;
+    }
+
+    .link_bio {
+      font-size: 17px;
+      width: 38%;
+      text-decoration: none;
+      margin: 0;
+      @include tablet {
+        width: max-content;
+      }
+
+      @include mobileL {
+        width: 100%;
+      }
+
+      &:hover {
+        text-decoration: wavy underline;
+        color: color(buttonColor);
+      }
+    }
+  }
+}

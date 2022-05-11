@@ -1,0 +1,49 @@
+@import "scss/abstracts/variables";
+body {
+  color: color(accent);
+  background-color: color(backgorund);
+}
+.isLight {
+  color: color(accentLight);
+  background-color: color(backgroundLight);
+
+  button {
+    background-color: color(buttonColorLight);
+    color: color(primaryLight);
+  }
+  div.card-big, .skeleton__content{
+    background-color: color(primaryLight);
+  }
+
+  div.card-small {
+    background-color:  color(backgroundLight);
+  }
+  .li__strong, .span{
+    color: color(accentLight);
+  }
+  .header__form {
+    background-color: color(primaryLight);
+    color: color(buttonColorLight);
+
+    .header__input {
+        color: color(accentLight);
+
+      &::placeholder {
+        color: color(accentLight);
+      }
+    }
+
+  }
+  .skeletonAnimate{
+    animation: skeletonAnimateS 1.2s linear infinite alternate;
+  }
+
+  @keyframes skeletonAnimateS {
+    0% {
+      background-color: color(backgroundLight);
+    }
+    100% {
+      background-color: color(skeleton1Light);
+    }
+  }
+}

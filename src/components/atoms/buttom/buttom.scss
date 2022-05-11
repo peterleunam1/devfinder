@@ -1,0 +1,23 @@
+@import '../../../scss/abstracts/mixins';
+@import '../../../scss/abstracts/variables';
+
+.header__button{
+    background-color: color(buttonColor);
+    border-radius: $radius;
+    padding: 7px $pm1;
+    color: color(accent);
+    border: none;
+    cursor: pointer;
+    @include flex(row, center, center);
+
+    @include mobile{
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    &:hover{
+        background-color: color(accent);
+        color: color(primary);
+        font-weight: bolder;
+    }
+}

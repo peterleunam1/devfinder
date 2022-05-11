@@ -1,0 +1,32 @@
+@import "../../../scss/abstracts/mixins";
+@import "../../../scss/abstracts/variables";
+
+.ul {
+  list-style: none;
+  @include flex(row, space-between, center);
+  padding: 0;
+  margin-bottom: $pm2;
+  width: $width;
+  @include mobileL {
+    margin-bottom: $pm1;
+		}
+
+  .ul__li {
+    @include flex(row, center, center);
+    color: color(accent);
+  }
+  .ul__li__hidden{
+    visibility: hidden;
+  }
+  .li__strong {
+    cursor: pointer;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: color(accent);
+    font-weight: bolder;
+
+    @include mobileL {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+$colors: (
+  primary: #1c2c4c,
+  backgorund: #141c2d,
+  buttonColor: #1778e5,
+  accent: #d0d7e1,
+  skeleton1: #3a558a,
+  skeleton2: #223a6b,
+  error: #c9201d,
+
+  // Colors for the theme
+  primaryLight: #FFffff,
+  backgroundLight:  #dfe4e4 ,
+  accentLight: #000000,
+  buttonColorLight: #69b7cd,
+  skeleton1Light: rgb(205, 213, 223),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$radius: 10px;
+$width: 100%;
+$pm1: 10px;
+$pm2: 20px;
+
+$tablet: 768px;
+$mobileL: 425px;
+$mobile: 375px;
+$mobileS: 320px;

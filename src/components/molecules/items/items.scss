@@ -1,0 +1,28 @@
+@import "../../../scss/abstracts/variables";
+@import "../../../scss/abstracts/mixins";
+
+.span {
+  font-size: 17px;
+  width: 38%;
+  margin-bottom: $pm1;
+  color: color(accent);
+
+  i {
+    width: $pm2;
+    height: $pm2;
+  }
+  .span__strong {
+    margin-left: 12px;
+    font-weight: lighter;
+
+    @include mobileS {
+      margin-left: 5px;
+    }
+  }
+
+  @include mobileL {
+    font-size: 15px;
+    width: 100%;
+  }
+  
+}

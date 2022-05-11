@@ -1,0 +1,59 @@
+@import '../../../scss/abstracts/mixins';
+@import '../../../scss/abstracts/variables';
+
+.header{
+    width: 85%;
+    @include flex(column, space-around, center);
+    margin: $pm2 + $pm1 auto;
+    margin-top: 0;
+    padding: 0;
+    padding-top: $pm2 + $pm1;
+
+    @include mobileL {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .header__form{
+        width: 80%;
+        @include flex(row, center, center);
+        background-color: color(primary);
+        padding: 8px $pm2;
+        border-radius: $radius;
+        margin-top: $pm2;
+
+        @include mobileL {
+           width: 92%;
+        }
+
+        i{
+            font-size: 1.3rem;
+            margin-right: $pm2;
+
+            @include mobileS{
+                font-size: 1.1rem;
+                margin-right: 13px;
+            }
+        }
+        &.error {
+            border: 5px dotted color(error);
+        }
+    }
+    .header__input{
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: color(accent);
+        font-weight: 500;
+    
+        &::placeholder{
+            color: color(accent);
+            font-weight: lighter;
+
+            @include mobile{
+                font-size: 13px;
+            }
+        }
+    }
+}

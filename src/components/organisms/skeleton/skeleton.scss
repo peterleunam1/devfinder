@@ -1,0 +1,113 @@
+@import "../../../scss/abstracts/mixins";
+@import "../../../scss/abstracts/variables";
+
+.skeletonAnimate {
+  animation: skeletonAnimate 1.2s linear infinite alternate;
+}
+.hide {
+  display: none;
+
+  @include mobileL {
+    display: block;
+  }
+}
+.skeleton__content {
+  @include flex(column, center, center);
+  width: 68%;
+  height: 59vh;
+  border-radius: $radius;
+  margin: 0 auto;
+  background-color: color(primary);
+  padding: $pm2;
+
+  .skeleton__content__one {
+    @include flex(row, space-around, center);
+    width: $width;
+    margin-bottom: $pm2;
+
+    @include mobileL{
+      flex-wrap: wrap;
+    }
+    .skeleton__content__one__avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+
+      @include mobileL{
+        width: 90px;
+        height: 90px;
+      }
+    }
+    .skeleton__content__one__name {
+      width: 32%;
+      height: 32px;
+      border-radius: $radius;
+      
+      @include mobileL{
+        width: 50%;
+        height: 40px;
+      }
+    }
+    .skeleton__content__one__join {
+      width: 28%;
+      height: 32px;
+      border-radius: $radius;
+
+      @include mobileL{
+        display: none;
+      }
+    }
+  }
+
+  .skeleton__content__two {
+    @include flex(column, center, center);
+    width: $width;
+
+    .skeleton__content__two__bio {
+      width: 50%;
+      height: 38px;
+      margin-bottom: $pm2;
+      border-radius: $radius;
+
+      @include mobileL{
+        width: 100%;
+        height: 40px;
+      }
+    }
+    .skeleton__content__two__follow {
+      @include flex(row, space-between, center);
+      width: 50%;
+      height: 70px;
+      margin-bottom: $pm2;
+      border-radius: $radius;
+
+      @include mobileL{
+        width: 80%;
+        height: 60px;
+      }
+    }
+  }
+  .skeleton__content__three {
+    width: 50%;
+    border-radius: $radius;
+
+    .skeleton__content__three {
+      display: none;
+    }
+
+    @include mobileL{
+      width: 80%;
+      height: 20px;
+      margin: 5px 0;
+    }
+  }
+}
+
+@keyframes skeletonAnimate {
+  0% {
+    background-color: color(skeleton1);
+  }
+  100% {
+    background-color: color(skeleton2);
+  }
+}
