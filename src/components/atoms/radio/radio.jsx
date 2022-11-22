@@ -10,7 +10,7 @@ export default function Radio() {
       <button
         className={theme}
         onClick={() =>
-          setTheme(theme === " switch active" ? "switch" : " switch active")
+          setTheme(theme === "switch active" ? "switch" : "switch active")
         }
       >
         <span>
