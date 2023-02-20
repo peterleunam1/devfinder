@@ -22,7 +22,7 @@ export default function Searched({ params }) {
   };
   return (
     <div className="search">
-      <Header />
+      <Header withLogotype={true} />
       {loading ? (
         <Skeleton />
       ) : user? (

@@ -14,7 +14,6 @@ function App() {
   }, []);
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(theme));
-    console.log("Saving in localStorage");
   }, [theme]);
 
   return (
