@@ -5,7 +5,6 @@ import Home from "./components/pages/home/home";
 import Radio from "./components/atoms/radio/radio";
 import "./app.scss";
 
-
 function App() {
   const [theme, setTheme] = useState("isDark");
 
@@ -23,7 +22,7 @@ function App() {
           setTheme(theme === "isDark" ? "isLight" : "isDark");
         }}
       >
-        <Radio />
+      <Radio />
       </div>
       <Route path="/" component={Home} />
       <Route path="/users/:keyword" component={Searched} />
